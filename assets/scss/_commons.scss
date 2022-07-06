@@ -1,0 +1,17 @@
+.body{
+	background-image: url(../images/banner.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    color: $clr_white;
+}
+.imgService{
+	border-radius: 10%;
+	border: solid 0.4rem;
+	color: $clr_yellowTwo;
+}
+#circle{
+    border-radius: 50%;
+    border: solid 0.4rem;
+    color: $clr_darkYellow;
+}
