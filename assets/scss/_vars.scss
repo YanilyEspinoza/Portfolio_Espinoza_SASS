@@ -1,11 +1,13 @@
 // colors
-$clr_green: hsl(132, 100%, 65%);
-$clr_yellowOne: hsl(56, 100%, 65%);
-$clr_yellowTwo: hsl(38, 100%, 65%);
-$clr_darkYellow: hsl(44, 16%, 18%);
-$clr_white: hsl(35, 38%, 94%);
-$clr_darkGrey_trans: hsla(44, 16%, 18%, 0.5); 
-$clr_grey: hsl(0, 0%, 47%);
+$colors:(
+  'green': hsl(132, 100%, 65%),
+  'yellowOne': hsl(56, 100%, 65%),
+  'yellowTwo': hsl(38, 100%, 65%),
+  'darkYellow': hsl(44, 16%, 18%),
+  'white': hsl(35, 38%, 94%),
+  'darkGrey_trans': hsla(44, 16%, 18%, 0.5),
+  'grey': hsl(0, 0%, 47%),
+);
 
 //breakpoints
 $breakpoints: (
@@ -16,7 +18,14 @@ $breakpoints: (
 );
 
 @mixin media_up ($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints,$breakpoint)){
-      @content
-    }
+  @media screen and (min-width: map-get($breakpoints,$breakpoint)){
+    @content
   }
+};
+// name selector{@include media_up(ssm/sm/md/lg){Element to changue}}
+@mixin d_flex ($f_direction,$j_content) {
+  display: flex;
+  flex-direction: $f_direction;
+  justify-content: $j_content;
+};
+// name selector{@include d_flex(column/row,flex-start/center/flex-end/space-between/space-around/space-evenly/);}

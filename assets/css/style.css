@@ -35,18 +35,37 @@ body nav div button.navbar-toggler:hover {
   background-image: url(../images/banner.webp);
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
-  color: #f6f1ea; }
-
-.imgService {
-  border-radius: 10%;
-  border: solid 0.4rem;
-  color: #ffbe4d; }
+  min-height: 100vh;
+  color: #f6f1ea;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 #circle {
-  border-radius: 50%;
+  border-radius: 50%; }
+
+.imgGeneral {
+  border-radius: 10%; }
+
+.border_darkYellow, #circle {
   border: solid 0.4rem;
   color: #353127; }
+
+.page404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh; }
+
+.clr_green {
+  color: #4dff70; }
+
+.clr_yellow {
+  color: #ffbe4d; }
+
+.border_yellow, .imgGeneral {
+  border: solid 0.4rem;
+  color: #ffbe4d; }
 
 .bgColor {
   border-radius: 50%;

@@ -1,20 +1,20 @@
 .navDecoration {
 	@include media_up(ssm) {
-	  font-family: $font;
-	  font-weight: $text_light;
-	  .nav-link{
-		display: flex;
-		flex-direction: row-reverse;
-		&:hover{
-		  color:$clr_yellowTwo;
-		}
-	  }  
+	    font-family: $font;
+	    font-weight: $text_light;
+	    .nav-link{
+			display: flex;
+			flex-direction: row-reverse;
+			&:hover{
+				color: map-get($map: $colors, $key: 'yellowTwo');
+			}
+	  	}  
 	}
 	
 	@include media_up(sm) {
 	font-family: $font;
 	font-weight: $text_light;
-	background-color: $clr_darkGrey_trans;
+	background-color: map-get($map: $colors, $key: 'darkGrey_trans');
 	border-radius: 2.5rem;
 	background-image: linear-gradient(currentColor, currentColor);
 	background-position: 50% 80%;
@@ -22,13 +22,13 @@
 	background-size: 0% 2px;
 	transition: background-size 0.4s;
 	margin: auto 0.15rem;
-	  &:hover{
-			color:$clr_yellowTwo;
+		&:hover{
+			color: map-get($map: $colors, $key: 'yellowTwo');
 			background-size: 70% 2px;
-	  }
+		}
 	}
-  }
-  body nav div button.navbar-toggler:hover{
-	color: $clr_green;
-  }
+}
+body nav div button.navbar-toggler:hover{
+	color: map-get($map: $colors, $key: 'green');
+}
 

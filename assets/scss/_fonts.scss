@@ -14,5 +14,5 @@ $text_light:400;
 $text_bold:700;
 
 .textYellow{
-    color: $clr_yellowOne
+    color: map-get($map: $colors, $key: 'yellowOne');
 }
