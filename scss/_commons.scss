@@ -1,0 +1,228 @@
+.body{
+	background-image: url(../../assets/images/banner.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: map-get($map: $colors, $key: 'white');
+    @include d_flex(column,space-between);
+}
+#circle{
+    border-radius: 50%;
+    @extend .border_darkYellow;
+}
+.imgGeneral{
+    border-radius: 10%;
+    @extend .border_yellow;
+}
+.border_darkYellow{
+    border: solid 0.4rem;
+    color: map-get($map: $colors, $key: 'darkYellow');
+}
+.page404{
+    @include d_flex (column,space-evenly);
+    min-height: 100vh;
+}
+.clr_green{
+    color: map-get($map: $colors, $key: 'green');
+}
+.clr_yellow{
+    color: map-get($map: $colors, $key: 'yellowTwo');
+}
+.border_yellow{
+    border: solid 0.4rem;
+    color: map-get($map: $colors, $key: 'yellowTwo');
+}
+
+//SKILLS
+.header_skill{
+    min-height: 100vh;
+}
+.grid-skill{
+    width: 99%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40vh 80vh;
+    grid-template-areas: 
+    "zone1A"
+    "zone1B";
+}
+.zone1A{
+    grid-area: zone1A;
+}
+.zone1B{
+    grid-area: zone1B;
+}
+.div_p_skill{
+    min-height: 85vh;
+    display: flex;
+}
+.aabsolute{
+    position: absolute;
+}
+.graphic-circles{
+    height: 58%;
+    aspect-ratio: 1 / 1;
+    img{
+        width: auto;
+        height: 58%;
+        mix-blend-mode: screen;
+    }
+}
+@media screen and(min-width:380px) {
+    .graphic-circles{
+        height: 70%;
+    }
+    .graphic-circles img{
+        height: 70%;  
+    }
+    .grid-skill{
+        grid-template-rows: 40vh 70vh;
+    }
+}
+@media screen and(min-width:576px) {
+    .graphic-circles{
+        height: 80%;
+    }
+    .graphic-circles img{
+        height: 80%;  
+    } 
+    .grid-skill{
+        grid-template-rows: 50vh 70vh;
+    }
+    .div_p_skill p{
+        margin: 1rem 5rem;
+    }
+}
+.graphic-energy{
+    animation: turn1 40s linear infinite;
+}
+.graphic-animation{
+    animation: turn1 20s linear infinite;
+}
+.graphic-circle{
+    animation: turn2 30s linear infinite;
+}
+@keyframes turn1{
+    to{
+        transform: rotate(1turn);
+    }
+}
+@keyframes turn2{
+    to{
+        transform: rotate(-1turn);
+    }
+}
+.target{
+    background-color: map-get($map: $colors, $key: 'darkGrey_trans');
+    border-color: map-get($map: $colors, $key: 'yellowOne');
+}
+
+//CONTACT
+.map{
+    border-radius: 5%;
+    border-color: map-get($map: $colors, $key: 'yellowTwo');
+    border: solid 0.5rem;
+}
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    color:  map-get($map: $colors, $key: 'black');
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 10%;
+    border-color: map-get($map: $colors, $key: 'darkGreenTrans');
+    background-color: map-get($map: $colors, $key: 'darkGreenTrans');
+    &:hover{
+        background-color: map-get($map: $colors, $key: 'darkYellow');
+        color: map-get($map: $colors, $key: 'white');
+        box-shadow: 0 0 10px map-get($map: $colors, $key: 'yellowOne'), 0 0 40px map-get($map: $colors, $key: 'yellowOne'), 0 0 80px map-get($map: $colors, $key: 'yellowOne');
+        transition-delay: 1s;
+        .span1{
+            left: 100%;
+            transition: 1s;
+        };
+        .span2{
+            top: 100%;
+            transition: 1s;
+            transition-delay: 0.25s;
+        };
+        .span3{
+            right: 100%;
+            transition: 1s;
+            transition-delay: 0.5s;
+        };
+        .span4{
+            bottom: 100%;
+            transition: 1s;
+            transition-delay: 0.75s;
+        };
+    }    
+    span{
+    position: absolute;
+    display: block;
+    }    
+}
+.span1{
+    top: 0;
+    left: -100%;
+    @include contact_span(100%,2px,linear-gradient(90deg, transparent, map-get($map: $colors, $key: 'yellowTwo')));
+}
+.span2{
+    top: -100%;
+    right: 0;
+    @include contact_span(2px,100%,linear-gradient(180deg, transparent, map-get($map: $colors, $key: 'yellowTwo')));
+}
+.span3{
+    bottom: 0;
+    right: -100%;
+    @include contact_span(100%,2px,linear-gradient(270deg, transparent, map-get($map: $colors, $key: 'yellowTwo')));
+}
+.span4{
+    bottom: -100%;
+    left: 0;
+    @include contact_span(2px,100%,linear-gradient(360deg, transparent, map-get($map: $colors, $key: 'yellowTwo')));
+}
+.img_portfolio{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    &:hover{
+        box-shadow: 0 0 1px map-get($map: $colors, $key: 'white'), 0 0 12px map-get($map: $colors, $key: 'white'), 0 0 24px map-get($map: $colors, $key: 'white');
+        transition-delay: 0.1s;
+    }
+}
+//INDEX
+.index_resalt{
+    text-decoration: none;
+    color: map-get($map: $colors, $key: 'white');
+    background-position: 50% 95%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.5s;
+    margin: auto 0.15rem;
+    border-radius: 2.5rem;
+    background-image: linear-gradient(currentColor, currentColor);
+    &:hover{
+        color: map-get($map: $colors, $key: 'yellow');
+        background-size: 80% 2px;
+    }
+}
+.t_deco_none{
+    text-decoration: none;
+}
+
+//OTHERS
+.disclaimer{
+    display: none;
+}
+.p_icon{
+    width: 50px;
+    height: 50px;
+    background-color: map-get($map: $colors, $key: 'yellowTwo');
+    border-radius: 50%;
+    animation: turn1 20s linear infinite;
+}

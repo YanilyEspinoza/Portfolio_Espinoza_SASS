@@ -7,6 +7,8 @@ $colors:(
   'white': hsl(35, 38%, 94%),
   'darkGrey_trans': hsla(44, 16%, 18%, 0.5),
   'grey': hsl(0, 0%, 47%),
+  'darkGreenTrans':hsla(132, 100%, 65%, 0.5),
+  'black':hsl(120, 100%, 0%),
 );
 
 //breakpoints
@@ -29,3 +31,9 @@ $breakpoints: (
   justify-content: $j_content;
 };
 // name selector{@include d_flex(column/row,flex-start/center/flex-end/space-between/space-around/space-evenly/);}
+@mixin contact_span ($btn_width,$btn_height,$btn_background){
+  width: $btn_width;
+  height: $btn_height;
+  background: $btn_background;
+};
+// name selector{@include contact_span(width,height,background);}

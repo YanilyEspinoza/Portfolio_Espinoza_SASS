@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CEO-->
+    <meta name="description" content="Page that collects data necessary for budget requests, service requirements and direct contact with Yanily Espinoza."> 
+    <meta name="author" content="Yanily Espinoza">
+    <meta name="keywords" content="web, developer, service, website, design, challengue, tutoring">
+    <meta name="robots" content="index, follow">
+    <title>Contact | Yanily Espinoza | Web Developer</title>
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!--favicon-->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--WOW-->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+  </head>
+  <body class="body w-100">
+
+    <!--START NAVBAR-->
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"><img src="../assets/images/favicon.png" alt="Yanily Espinoza's corporate logo shows a turning gear and inside it there are symbols of the html syntax, the less than sign followed by a diagonal bar and ends with a greater than symbol." class="p_icon"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item navDecoration">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item navDecoration">
+              <a class="nav-link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item navDecoration">
+               <a class="nav-link" href="./skillsset.html">Skill-Set</a>
+            </li>
+            <li class="nav-item navDecoration">
+              <a class="nav-link" href="./services.html">Service</a>
+            </li>
+            <li class="nav-item navDecoration">
+              <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--END NAVBAR-->
+
+    <!--START CONTACT FORM-->
+    <header class="mt-5 container-fluid">
+      <h1>Contact</h1>
+      <p class="fs-4">&emsp;Always available for freelance work if the right project comes along.</p>
+      <p class="fs-4">&emsp;Complete the following form and & Feel free to contact me!</p>        
+  </header>
+  <div class="mb-5 container-fluid"> 
+      <form action="envio.php" class="">
+          <fieldset class="row my-2">
+              <div class="col-sm-12 col-md-6">
+                  <label for="fname" class="my-2">Name:</label> 
+                  <input type="text" class="form-control" placeholder="Yanily Alejandra" aria-label="First name" id="fname" name="Fname">
+              </div>
+              <div class="col-sm-12 col-md-6">
+                  <label for="lname" class="my-2">Last Name:</label>
+                  <input type="text" class="form-control" placeholder="Espinoza" aria-label="Last name" id:="lname"name="Lname" >
+              </div>
+              <div class="col-sm-6">
+                  <label for="email" class="my-2">E-mail:</label>
+                  <input type="email" id="email" placeholder="pedro27@gmail.com" name="Email" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                  <label for="tel" class="my-2">Phone:</label>
+                  <input type="tel" id="tel" placeholder="+0900-17288-88" name="Phone" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                  <label for="service" class="form-label">Service Required?</label>
+                  <select id="service" class="form-select" name="Service">
+                    <option value="--" selected>--</option>  
+                    <option value="Website Design">Website Design</option>
+                    <option value="Collaborative Work">Collaborative Work</option>
+                    <option value="Tutoring">Tutoring</option>
+                  </select>
+              </div>
+              <div class="col-sm-6">
+                  <label for="comment">Leave your comment:</label>
+                  <textarea class="form-control my-2" placeholder="Leave a comment here" id="comment"></textarea>
+              </div>
+              <div class="col-sm-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="information" name="Information" value="Yes">
+                    <label class="form-check-label" for="information">Do you want to receive information about us?</label>
+                  </div>  
+              </div>
+          </fieldset>        
+          <div class="text-center">
+              <button type="submit" class="btn-neon">
+                  <span class="span1"></span>
+                  <span class="span2"></span>
+                  <span class="span3"></span>
+                  <span class="span4"></span>
+                  Submit
+              </button>
+              <button type="reset" class="btn-neon">
+                  <span class="span1"></span>
+                  <span class="span2"></span>
+                  <span class="span3"></span>
+                  <span class="span4"></span>
+                  Reset
+              </button>
+          </div>
+      </form>
+      <!--END CONTACT FORM-->
+
+      <!--LOCATION-->
+      <aside class="my-5 ">
+        <h3 class="my-3">Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786859.1145806211!2d2.3511633468803295!3d39.61215136824025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297b8766606c129%3A0xb7eb9bff02d2ecc0!2sMallorca!5e0!3m2!1ses!2sar!4v1653873368647!5m2!1ses!2sar" width="220vp" height="auto" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </aside>
+    </div> 
+    <!--END CONTACT FORM-->
+
+    <!--START FOOTER-->
+    <footer class="mt-5 container-fluid">
+      <h2 class="">Socials</h2>
+      <!--SOCIALS-->
+      <section class="d-flex justify-content-evenly">
+        <div class="mb-5 mt-2">
+          <a href="https://twitter.com/Xyz_vzla" target="_blank">
+            <img src="../assets/images/Twitter.png" width="55vp" alt="Twitter" class="bgColor">
+          </a>
+        </div>
+        <div class="mb-5 mt-2">
+          <a href="https://www.linkedin.com/in/yanilyespinoza/" target="_blank">
+            <img src="../assets/images/Linkedin.png" width="55vp" alt="Linkedin" class="bgColor">
+          </a>
+        </div>
+        <div class="mb-5 mt-2">
+          <a href="https://github.com/YanilyEspinoza" target="_blank">
+            <img src="../assets/images/Gitbut.png" width="55vp" alt="Github" class="bgColor">
+          </a>
+        </div>
+      </section>
+      <!--PUBLIC DOMAIN-->
+      <section class="d-flex justify-content-center align-items-center my-3">
+        <img src="../assets/images/Dominio publico.jpeg" width="100" height="40" alt="public domain">
+        <p class="footerP">2022 Yanily Espinoza. Web Developer</p>
+      </section>
+    </footer>
+    <!--END FOOTER-->
+        
+    <!--SCRIPT-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+  </body>
+</html>

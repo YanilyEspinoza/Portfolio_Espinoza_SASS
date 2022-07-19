@@ -1,6 +1,6 @@
 .navDecoration {
 	@include media_up(ssm) {
-	    font-family: $font;
+	    font-family: $font1;
 	    font-weight: $text_light;
 	    .nav-link{
 			display: flex;
@@ -12,7 +12,7 @@
 	}
 	
 	@include media_up(sm) {
-	font-family: $font;
+	font-family: $font1;
 	font-weight: $text_light;
 	background-color: map-get($map: $colors, $key: 'darkGrey_trans');
 	border-radius: 2.5rem;
