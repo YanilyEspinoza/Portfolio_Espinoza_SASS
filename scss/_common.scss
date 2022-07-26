@@ -1,3 +1,16 @@
+
+
+//CONTACT
+
+
+
+
+
+
+
+
+
+//GENERAL
 .body{
 	background-image: url(../../assets/images/banner.webp);
     background-attachment: fixed;
@@ -6,10 +19,6 @@
     color: map-get($map: $colors, $key: 'white');
     @include d_flex(column,space-between);
 }
-#circle{
-    border-radius: 50%;
-    @extend .border_darkYellow;
-}
 .imgGeneral{
     border-radius: 10%;
     @extend .border_yellow;
@@ -17,6 +26,10 @@
 .border_darkYellow{
     border: solid 0.4rem;
     color: map-get($map: $colors, $key: 'darkYellow');
+}
+.border_yellow{
+    border: solid 0.4rem;
+    color: map-get($map: $colors, $key: 'yellowTwo');
 }
 .page404{
     @include d_flex (column,space-evenly);
@@ -28,10 +41,80 @@
 .clr_yellow{
     color: map-get($map: $colors, $key: 'yellowTwo');
 }
-.border_yellow{
-    border: solid 0.4rem;
-    color: map-get($map: $colors, $key: 'yellowTwo');
+.disclaimer{
+    display: none;
 }
+.t_deco_none{
+    text-decoration: none;
+}
+
+//INDEX
+.index_header{
+    min-height: 100vh;
+    display: flex;
+    align-items: center
+}
+.index_resalt{
+    @extend .t_deco_none;
+    color: map-get($map: $colors, $key: 'white');
+    background-position: 50% 95%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.5s;
+    margin: auto 0.15rem;
+    border-radius: 2.5rem;
+    background-image: linear-gradient(currentColor, currentColor);
+    &:hover{
+        color: map-get($map: $colors, $key: 'yellow');
+        background-size: 80% 2px;
+    }
+}
+.p_icon{
+    width: 50px;
+    height: 50px;
+    background-color: map-get($map: $colors, $key: 'yellowTwo');
+    border-radius: 50%;
+    animation: turn1 20s linear infinite;
+}
+#circle{
+    border-radius: 50%;
+    @extend .border_darkYellow;
+}
+.img_portfolio{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    transition: 0.7s;
+    &:hover{
+        box-shadow: 0 0 1px map-get($map: $colors, $key: 'yellow'), 0 0 12px map-get($map: $colors, $key: 'yellow'), 0 0 24px map-get($map: $colors, $key: 'yellow');
+        transition-delay: 0.1s;
+    }
+}
+header section article div .d-flex{
+    @include media_up(ssm){
+        margin-top: 3rem;
+    };
+}
+header section article div .d-flex{
+    @include media_up(md){
+        margin-top: 0rem};
+}
+.t_deco_none{
+    text-decoration: none;
+}
+
+//PORTFOLIO
+.portfolio_main{
+    min-height: 100vh;
+}
+.img_portfolio{
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    &:hover{
+        box-shadow: 0 0 1px map-get($map: $colors, $key: 'white'), 0 0 12px map-get($map: $colors, $key: 'white'), 0 0 24px map-get($map: $colors, $key: 'white');
+        transition-delay: 0.1s;
+    }
+}
+
 
 //SKILLS
 .header_skill{
@@ -60,34 +143,42 @@
     position: absolute;
 }
 .graphic-circles{
-    height: 58%;
+    height: 40%;
     aspect-ratio: 1 / 1;
     img{
         width: auto;
-        height: 58%;
+        height: 40%;
         mix-blend-mode: screen;
     }
 }
+@media screen and(min-width:320px) {
+    .graphic-circles{
+        height: 44%;
+    }
+    .graphic-circles img{
+        height: 44%;  
+    }
+    .grid-skill{
+        grid-template-rows: 30vh 70vh;
+    }
+}
 @media screen and(min-width:380px) {
+    .graphic-circles{
+        height: 48%;
+    }
+    .graphic-circles img{
+        height: 48%;  
+    }
+}
+@media screen and(min-width:576px) {
     .graphic-circles{
         height: 70%;
     }
     .graphic-circles img{
         height: 70%;  
-    }
-    .grid-skill{
-        grid-template-rows: 40vh 70vh;
-    }
-}
-@media screen and(min-width:576px) {
-    .graphic-circles{
-        height: 80%;
-    }
-    .graphic-circles img{
-        height: 80%;  
     } 
     .grid-skill{
-        grid-template-rows: 50vh 70vh;
+        grid-template-rows: 45vh 70vh;
     }
     .div_p_skill p{
         margin: 1rem 5rem;
@@ -115,6 +206,38 @@
 .target{
     background-color: map-get($map: $colors, $key: 'darkGrey_trans');
     border-color: map-get($map: $colors, $key: 'yellowOne');
+}
+.skill_img1{
+    @extend .target;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include media_up(ssm){
+        width: 200px};
+    @include media_up(sm){
+        width: 280px};
+    @include media_up(md){
+        width: 320px};
+    @include media_up(lg){
+        width: 360px}; 
+    @include media_up(xl){
+        width: 400px};     
+}
+.skill_img2{
+    @extend .target;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    @include media_up(ssm){
+        width: 200px};
+    @include media_up(sm){
+        width: 180px};
+    @include media_up(md){
+        width: 205px};
+    @include media_up(lg){
+        width: 235px}; 
+    @include media_up(xl){
+        width: 260px};     
 }
 
 //CONTACT
@@ -186,43 +309,4 @@
     bottom: -100%;
     left: 0;
     @include contact_span(2px,100%,linear-gradient(360deg, transparent, map-get($map: $colors, $key: 'yellowTwo')));
-}
-.img_portfolio{
-    border-top-left-radius: 10%;
-    border-top-right-radius: 10%;
-    &:hover{
-        box-shadow: 0 0 1px map-get($map: $colors, $key: 'white'), 0 0 12px map-get($map: $colors, $key: 'white'), 0 0 24px map-get($map: $colors, $key: 'white');
-        transition-delay: 0.1s;
-    }
-}
-//INDEX
-.index_resalt{
-    text-decoration: none;
-    color: map-get($map: $colors, $key: 'white');
-    background-position: 50% 95%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size 0.5s;
-    margin: auto 0.15rem;
-    border-radius: 2.5rem;
-    background-image: linear-gradient(currentColor, currentColor);
-    &:hover{
-        color: map-get($map: $colors, $key: 'yellow');
-        background-size: 80% 2px;
-    }
-}
-.t_deco_none{
-    text-decoration: none;
-}
-
-//OTHERS
-.disclaimer{
-    display: none;
-}
-.p_icon{
-    width: 50px;
-    height: 50px;
-    background-color: map-get($map: $colors, $key: 'yellowTwo');
-    border-radius: 50%;
-    animation: turn1 20s linear infinite;
 }

@@ -1,7 +1,17 @@
 .bgColor{
     border-radius: 50%;
     background-color: map-get($map: $colors, $key: 'white');
+    transition: 4s;   
+    &:hover{
+        transform: rotate(1turn);    
+    }
 }
 .footerP{
     margin: 0rem 1rem;
+}
+.div_footer{
+    @include media_up(md){
+        padding: 0rem 3rem 2rem 5rem;
+        max-width: 90vw;
+    };
 }
